@@ -14,6 +14,15 @@ align-items: center;
 .port-card{
 width: 40vw;
 height: 53vh;
+overflow: hidden;
+color: black;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+font-size: 1.2em;
+text-transform: uppercase;
 }
 
 @media screen and (max-width: 1024px){
@@ -30,66 +39,68 @@ height: 53vh;
         flex-direction: column;
     }
 }
+
+/* pseudo-elements for image layering */
+.port-card::before,
+.port-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.9s ease-in-out;
+  z-index: 0;
+}
+
+/* base image visible */
+.port-card::before {
+  opacity: 1;
+}
+
+/* hover image hidden by default */
+.port-card::after {
+  opacity: 0;
+}
+
+/* onhover fade to after image */
+.port-card:hover::after {
+  opacity: 1;
+}
+
+/* ensure text appears above the images */
+.port-card .card-text-link {
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.5em 1em;
+  border-radius: 4px;
+}
 /* .card-text-link{
 
 } */
 
-/* #corporate-lifestyle{
-
-}
-
-#corporate-lifestyle:hover{
-
-} */
-
-/* #products{
-
-}
-
-#products:hover{
-
-}
-
-#headshots{
-
-
-}
-
-#headshots:hover{
-
-
-}
-
-#modeling{
-
-}
-
-#modeling:hover{
-
-}
-
-#fitness{
-
-}
-
-#fitness:hover{
-
-}
-
-#editorial{
-
-}
-
-#editorial:hover{
-
-}
-
-#birthday{
-
-
-}
-
-#birthday:hover{
-
-
-} */
+/* CORPORATE LIFESTYLE */
+#corporate-lifestyle::before {
+    background-image: url('assets/images/corplife1.webp');
+  }
+  #corporate-lifestyle::after {
+    background-image: url('assets/images/corplifehover.webp');
+  }
+  
+  /* PRODUCTS */
+  #products::before {
+    background-image: url('assets/images/products1.webp');
+  }
+  #products::after {
+    background-image: url('assets/images/productshover.webp');
+  }
+  
+  /* HEADSHOTS */
+  #headshots::before {
+    background-image: url('assets/images/headshots1.webp');
+  }
+  #headshots::after {
+    background-image: url('assets/images/headshotshover.webp');
+  }
