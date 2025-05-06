@@ -1,0 +1,95 @@
+#card-stage{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.card-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.port-card{
+width: 40vw;
+height: 53vh;
+}
+
+@media screen and (max-width: 1024px){
+    .port-card{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .port-card{
+        width: 100%;
+    }
+    .card-row{
+        flex-direction: column;
+    }
+}
+/* .card-text-link{
+
+} */
+
+/* #corporate-lifestyle{
+
+}
+
+#corporate-lifestyle:hover{
+
+} */
+
+/* #products{
+
+}
+
+#products:hover{
+
+}
+
+#headshots{
+
+
+}
+
+#headshots:hover{
+
+
+}
+
+#modeling{
+
+}
+
+#modeling:hover{
+
+}
+
+#fitness{
+
+}
+
+#fitness:hover{
+
+}
+
+#editorial{
+
+}
+
+#editorial:hover{
+
+}
+
+#birthday{
+
+
+}
+
+#birthday:hover{
+
+
+} */
