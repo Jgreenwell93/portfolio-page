@@ -24,20 +24,23 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 48px;
     text-transform: uppercase;
     position: relative;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }
 
 @media screen and (max-width: 1024px) {
     .port-card {
-        width: 95%;
+        width: 47.5%;
     }
 }
 
 @media screen and (max-width: 767px) {
     .port-card {
         width: 100%;
+        font-size: 46px;
     }
 
     .card-row {
@@ -78,7 +81,6 @@
     z-index: 1;
     text-decoration: none;
     color: white;
-    padding: 0.5em 1em;
     border-radius: 4px;
 }
 
