@@ -14,6 +14,7 @@ html {
     align-items: center;
     background-color: black;
     width: 100%;
+    height: 100%;
 }
 
 .card-row {
@@ -26,6 +27,10 @@ html {
 .port-card {
     width: 40vw;
     height: 53vh;
+    /* aspect ratio for use in wix iframe */
+    /* width: 40%;
+    height: auto;
+    aspect-ratio: 4.8 / 3; */
     overflow: hidden;
     color: black;
     display: flex;
